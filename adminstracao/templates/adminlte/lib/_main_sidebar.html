@@ -1,0 +1,29 @@
+{% extends 'adminlte/lib/_main_sidebar.html' %}
+
+<!-- Alteração do nome exposto na barra lateral -->
+{% block logo %}
+    <a href="/" class="brand-link">
+        {% block logo_text %}<span class="brand-text font-weight-light">e-diaristas</span>{% endblock %}
+    </a>
+{% endblock logo %}
+
+<!-- Alteração do título da para lateral -->
+{% block nav_heading %}
+Menu de Itens
+{% endblock nav_heading%}
+
+<!-- Links de navegação da barra lateral -->
+{% block nav_links %}
+<li class="nav-item">
+    <a href="{% url 'listar_servicos'%}" class="nav-link">
+        <i class="nav-icon fas fa-house-user"></i> 
+        <p>Home</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'cadastrar_servico' %}" class="nav-link active">
+        <i class="nav-icon fas fa-plus"></i> 
+        <p>Cadastrar Serviços</p>
+    </a>
+</li>
+{% endblock nav_links %}
