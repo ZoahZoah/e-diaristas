@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+<div class="card-primary">
+    <div class="card-header">
+        Cadastrar Usuário
+    </div>
+    <div class="card-body" class="">
+        <form method="POST">
+            {% csrf_token %}
+            {% bootstrap_form form_usuario %}
+            <input type="submit" class="btn btn-primary" value="Cadastrar">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
