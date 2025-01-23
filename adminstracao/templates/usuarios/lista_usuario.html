@@ -9,13 +9,23 @@
         <table class="table table-condensed">
             <thead>
                 <tr>
-                    <th>Nome</th>
+                    <th>Usuário</th>
+                    <th>Primeiro Nome</th>
+                    <th>Sobrenome</th>
+                    <th>Email</th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
                 {% for usuario in usuarios %}
                     <tr>
                         <td>{{usuario.username}}</td>
+                        <td>{{usuario.first_name}}</td>
+                        <td>{{usuario.last_name}}</td>
+                        <td>{{usuario.email}}</td>
+                        <td>
+                            <a href="{% url 'editar_usuario' usuario.id %}">Editar</a>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
