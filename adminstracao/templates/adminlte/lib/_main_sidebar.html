@@ -26,4 +26,16 @@ Menu de Itens
         <p>Cadastrar Serviços</p>
     </a>
 </li>
+<li class="nav-item">
+    <a href="{% url 'listar_usuarios' %}" class="nav-link">
+        <i class="nav-icon fas fa-user"></i>
+        <p>Usuários</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="{% url 'deslogar_usuario' %}" class="nav-link">
+        <i class="nav-icon fas fa-door-open"></i>
+        <p>Sair</p>
+    </a>
+</li>
 {% endblock nav_links %}
